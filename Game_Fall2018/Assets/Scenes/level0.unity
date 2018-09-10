@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 343351008}
   - component: {fileID: 343351007}
   - component: {fileID: 343351011}
+  - component: {fileID: 343351012}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -299,6 +300,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &343351012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 343351006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4a7d2f31ae93646aedb8dde23e37bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 0
+  JumpHeight: 15
 --- !u!1 &358402240
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -393.5, y: 153}
+  m_AnchoredPosition: {x: -587, y: 229}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &358402242
