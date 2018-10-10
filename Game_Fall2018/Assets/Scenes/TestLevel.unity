@@ -122,9 +122,11 @@ GameObject:
   m_Component:
   - component: {fileID: 25062254}
   - component: {fileID: 25062253}
+  - component: {fileID: 25062256}
   - component: {fileID: 25062255}
+  - component: {fileID: 25062257}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: TestingObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,13 +169,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74d4700a82d64bf449f8ec4c682cc096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 65
+  Health: 60
   Tail: 0
   Bark: 1
-  CoatColor: {r: 0.45321858, g: 1, b: 0.28773582, a: 0}
-  Size: 1
-  EarType: shaped like the Statue of Liberty
-  Friendly: 1
+  CoatColor: {r: 0.1484611, g: 1, b: 0, a: 0}
+  Size: 2
+  EarType: Shaped like the Eiffel Tower
+  Friendly: 0
+--- !u!114 &25062256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25062252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd08a0ca43e76a14ab325c6c4c7972c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 25
+  Aquatic: 0
+  Legs: 8
+  Eyes: 6
+  Winged: 0
+  Venomous: 1
+  Hairiness: 60
+  Diameter: 6
+--- !u!114 &25062257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 25062252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e76d209adcc3f884b858cfb4c32cdec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weather: 
 --- !u!1 &119982016
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +275,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 000'
+  m_Text: 
 --- !u!222 &119982019
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -333,7 +366,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &375200172
 RectTransform:
@@ -417,6 +450,101 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &563196775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 563196778}
+  - component: {fileID: 563196777}
+  - component: {fileID: 563196776}
+  m_Layer: 0
+  m_Name: Oops
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &563196776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563196775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c50cb51c5295140845b745bc371b0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelManager: {fileID: 779146658}
+--- !u!61 &563196777
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563196775}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &563196778
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563196775}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.71, y: -4.47, z: -0.09375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &718974123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 718974124}
+  m_Layer: 0
+  m_Name: Checkpoint(0)
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &718974124
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 718974123}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.49996, y: 0.00004, z: 1.0390625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &779146652
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +557,7 @@ GameObject:
   - component: {fileID: 779146656}
   - component: {fileID: 779146655}
   - component: {fileID: 779146657}
+  - component: {fileID: 779146658}
   m_Layer: 0
   m_Name: PC
   m_TagString: Untagged
@@ -559,6 +688,23 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &779146658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 779146652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b2ce681e5688947bbf355b3579b177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentCheckPoint: {fileID: 718974123}
+  Player: {fileID: 779146655}
+  DeathParticle: {fileID: 1587723469}
+  RespawnParticle: {fileID: 1587723469}
+  RespawnDelay: 1.5
+  PointPenaltyOnDeath: 10
 --- !u!1001 &1051314295
 Prefab:
   m_ObjectHideFlags: 0
@@ -1124,7 +1270,7 @@ GameObject:
   - component: {fileID: 1587723471}
   - component: {fileID: 1587723470}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Smoke Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
