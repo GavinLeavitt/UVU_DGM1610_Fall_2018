@@ -5,6 +5,7 @@ using UnityEngine;
 public class LoopsHomework : MonoBehaviour {
 
 	private int OgreSize;
+	public GameObject Enemy;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,10 @@ public class LoopsHomework : MonoBehaviour {
 			}
 		}
 
+		// I don't know if this next one actually works, but what I'm getting at is that it spawns 3 enemies, each in a random X position.
+		// while(GameObject.FindGameObjectsWithTag("Enemy").Length < 3) {
+		// 	Instantiate(Enemy,)
+		// }
 
 	}
 	
