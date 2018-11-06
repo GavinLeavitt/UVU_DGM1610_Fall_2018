@@ -7,7 +7,7 @@ public class ArraysHomework : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		for(int i = 0; i < 10; i++){
+		for(int i = 0; i < Inventory.Length; i++){
 			switch(Random.Range(0,4)) {
 				case 0:
 					Inventory[i] = "Gold piece";
