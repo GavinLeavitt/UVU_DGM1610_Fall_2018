@@ -137,15 +137,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 25062252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001bd59685e397a4f9ac7020d133d82c, type: 3}
+  m_Script: {fileID: 11500000, guid: c84b240d1412f7c4288c2da6f6166668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pets:
-  - 
-  - 
-  - 
-  - 
-  - 
 --- !u!4 &25062254
 Transform:
   m_ObjectHideFlags: 0
@@ -5203,7 +5197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c50cb51c5295140845b745bc371b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 779146658}
+  LevelManager: {fileID: 0}
 --- !u!61 &563196777
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5282,11 +5276,10 @@ GameObject:
   - component: {fileID: 779146656}
   - component: {fileID: 779146655}
   - component: {fileID: 779146657}
-  - component: {fileID: 779146658}
   - component: {fileID: 779146659}
   m_Layer: 0
   m_Name: PC
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5414,23 +5407,6 @@ MonoBehaviour:
   WhatIsGround:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &779146658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 779146652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0b2ce681e5688947bbf355b3579b177, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentCheckPoint: {fileID: 718974123}
-  Player: {fileID: 779146655}
-  DeathParticle: {fileID: 404153153}
-  RespawnParticle: {fileID: 1304128506}
-  RespawnDelay: 1.5
-  PointPenaltyOnDeath: 10
 --- !u!114 &779146659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10738,7 +10714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c50cb51c5295140845b745bc371b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelManager: {fileID: 779146658}
+  LevelManager: {fileID: 0}
 --- !u!1 &1574710309
 GameObject:
   m_ObjectHideFlags: 0
@@ -15458,6 +15434,53 @@ Transform:
   m_Father: {fileID: 779146654}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1616226659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1616226661}
+  - component: {fileID: 1616226662}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1616226661
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1616226659}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.379083, y: 0.017541781, z: -0.095703125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1616226662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1616226659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b2ce681e5688947bbf355b3579b177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentCheckPoint: {fileID: 718974123}
+  Player: {fileID: 779146655}
+  CurrentPlayer: {fileID: 779146652}
+  DeathParticle: {fileID: 404153153}
+  RespawnParticle: {fileID: 1304128506}
+  RespawnDelay: 1.5
+  PointPenaltyOnDeath: 10
 --- !u!1 &1637250572
 GameObject:
   m_ObjectHideFlags: 0

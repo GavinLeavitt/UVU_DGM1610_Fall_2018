@@ -7,6 +7,8 @@ public class LevelManager : MonoBehaviour {
 	public GameObject CurrentCheckPoint;
 	public Rigidbody2D Player;
 
+	public GameObject CurrentPlayer;
+
 	// Particles
 	public GameObject DeathParticle;
 	public GameObject RespawnParticle;
@@ -35,6 +37,7 @@ public class LevelManager : MonoBehaviour {
 		Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);
 		//Hide Player
 		// player.enabled = false;
+		CurrentPlayer.SetActive(false);
 		Player.GetComponent<Renderer> ().enabled = false;
 		// Gravity Reset
 		GravityStore = Player.GetComponent<Rigidbody2D> ().gravityScale;
@@ -51,6 +54,7 @@ public class LevelManager : MonoBehaviour {
 		// Match Player's transform position
 		Player.transform.position = CurrentCheckPoint.transform.position;
 		//Show Player
+		CurrentPlayer.SetActive(true);
 		// player.enabled = true;
 		Player.GetComponent<Renderer> ().enabled = true;
 		// Spawn Player

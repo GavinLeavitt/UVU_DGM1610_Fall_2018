@@ -14,7 +14,6 @@ public class DestroyPlayer : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.name == "PC"){
-			if (other.GetComponent<Renderer> ().enabled)
 			LevelManager.RespawnPlayer();
 		}
 	}
