@@ -26,6 +26,8 @@ public class LevelManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Player = FindObjectOfType<Rigidbody2D> ();
+		DeathParticle = Resources.Load("Prefab/Death Particles") as GameObject;
+		RespawnParticle = Resources.Load("Prefab/Respawn Particles") as GameObject;
 	}
 
 	public void RespawnPlayer(){
