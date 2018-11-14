@@ -1190,7 +1190,7 @@ GameObject:
   - component: {fileID: 1498973704}
   - component: {fileID: 1498973703}
   - component: {fileID: 1498973709}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -6410,6 +6410,11 @@ Prefab:
     - target: {fileID: 4015384457112386, guid: cdae7b48c1a20c544a3f3b1257d70048, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 212767724536140682, guid: cdae7b48c1a20c544a3f3b1257d70048,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdae7b48c1a20c544a3f3b1257d70048, type: 2}
