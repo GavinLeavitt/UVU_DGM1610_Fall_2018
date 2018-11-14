@@ -46,6 +46,7 @@ public class ArraysHomework : MonoBehaviour {
 		Stats[2] = Random.Range(3, 5);
 		Stats[3] = Random.Range(3, 5);
 		Stats[4] = Random.Range(3, 5);
+		// A list would be way better...? Or an enum if those worked
 
 		// Randomize NPC name
 		for (int i = 0; i < NPCName.Length; i++) {
