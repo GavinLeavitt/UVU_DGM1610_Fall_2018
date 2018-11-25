@@ -10,6 +10,9 @@ public class Projectile : MonoBehaviour {
 	public GameObject EnemyDeath;
 
 	public GameObject ProjectileParticle;
+	public GameObject HealthPickup;
+	public GameObject AmmoPickup;
+	public GameObject LifePickup;
 
 	public int PointsForKill;
 
@@ -21,6 +24,9 @@ public class Projectile : MonoBehaviour {
 		
 		EnemyDeath = Resources.Load("Prefab/Death Particles") as GameObject;
 		ProjectileParticle = Resources.Load("Prefab/Respawn Particles") as GameObject;
+		HealthPickup = Resources.Load("Prefab/Health") as GameObject;
+		AmmoPickup = Resources.Load("Prefab/Ammo") as GameObject;
+		LifePickup = Resources.Load("Prefab/Life") as GameObject;
 
 		if(PC.transform.localScale.x < 0)
 			Speed = -Speed;
@@ -37,6 +43,27 @@ public class Projectile : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Enemy"){
 			Instantiate(EnemyDeath, other.transform.position, other.transform.rotation);
+			// Drop some loot at random. Loot is weighted: Ammo has highest chance, then Health, then no loot drop, then Lives.
+			switch(Random.Range(0, 11)) {
+				case 0:
+				case 1:
+				case 2:
+				case 3:
+				case 4:
+					Instantiate(AmmoPickup, other.transform.position, other.transform.rotation);
+					break;
+
+				case 5:
+				case 6:
+				case 7:
+				case 8:
+					Instantiate(HealthPickup, other.transform.position, other.transform.rotation);
+					break;
+
+				case 9:
+					Instantiate(LifePickup, other.transform.position, other.transform.rotation);
+					break;
+			}
 			Destroy (other.gameObject);
 			ScoreManager.AddPoints (PointsForKill);
 			Destroy (gameObject);
