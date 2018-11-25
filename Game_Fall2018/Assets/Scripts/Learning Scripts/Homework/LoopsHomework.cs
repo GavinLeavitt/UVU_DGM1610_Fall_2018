@@ -8,6 +8,7 @@ public class LoopsHomework : MonoBehaviour {
 	public GameObject Enemy;
 	private int TreeHeight;
 	private int YearsToGrow;
+	private int Forecast;
 
 	// Use this for initialization
 	void Start () {
@@ -48,7 +49,23 @@ public class LoopsHomework : MonoBehaviour {
 		// Something like this could be used in a long-form simulation style game??? Maybe? You'd have to calculate it all beforehand and then have an adaptive animation 
 		//showing the tree's growth progress... But you could influence the "random" growth of the tree by what fertilizer, land, weather, etc. was in play.
 
-		
+		Forecast = 0;
+		while(Forecast < 7) {
+			switch(Random.Range(0,3)) {
+				case 0:
+					print("Clear skies and balmy weather.");
+				break;
+
+				case 1:
+					print("A 75% chance for some light precipitation.");
+				break;
+
+				case 2:
+					print("A violent, sulfuric hellstorm's blowing in from the north. Might want to wear a light jacket.");
+				break;
+			}
+			Forecast++;
+		}
 	}
 	
 	// Update is called once per frame
