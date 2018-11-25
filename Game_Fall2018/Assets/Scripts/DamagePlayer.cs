@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyPlayer : MonoBehaviour {
+public class DamagePlayer : MonoBehaviour {
 
-
-	public LevelManager LevelManager;
+	public ScoreManager ScoreManager;
+	public int EnemyPower;
 
 	// Use this for initialization
 	void Start () {
-		LevelManager = FindObjectOfType <LevelManager>();	
+		ScoreManager = FindObjectOfType <ScoreManager>();	
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.name == "PC"){
-			LevelManager.RespawnPlayer();
+			ScoreManager.AddHealth(-EnemyPower);
 		}
 	}
 	
