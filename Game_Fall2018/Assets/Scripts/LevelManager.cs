@@ -34,6 +34,12 @@ public class LevelManager : MonoBehaviour {
 		StartCoroutine("RespawnPlayerCo");
 	}
 
+	public void GameOver(){
+		//Hide Player
+		CurrentPlayer.SetActive(false);
+		Player.GetComponent<Renderer> ().enabled = false;
+	}
+
 	public IEnumerator RespawnPlayerCo(){
 		//Generate Death Particle
 		Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);

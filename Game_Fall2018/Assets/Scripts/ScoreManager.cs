@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour {
 	
 	public static int Score;
+	public static int MaxHealth;
 	public static int Health;
 	public static int Ammo;
 	public static int Lives;
@@ -19,7 +20,8 @@ public class ScoreManager : MonoBehaviour {
 		ScoreText = GetComponent<Text>();
 
 		Score = 0;
-		Health = 10;
+		MaxHealth = 10;
+		Health = MaxHealth;
 		Ammo = 50;
 		Lives = 3;
 	}
@@ -29,10 +31,20 @@ public class ScoreManager : MonoBehaviour {
 		if (Score < 0){
 			Score = 0;
 		}
+
+		if (Health > MaxHealth) {
+			Health = MaxHealth;
+		}
+		
 		if (Health <= 0){
-			LevelManager.RespawnPlayer();
-			Health = 10;
+			Health = MaxHealth;
 			AddLives(-1);
+			if (Lives > 0) {
+				LevelManager.RespawnPlayer();
+			} else {
+				LevelManager.GameOver();
+				print("GAME OVER");
+			}
 		}
 		ScoreText.text = "Score: " + Score + "\nHealth: " + Health + "\nAmmo: " + Ammo + "\nLives: " + Lives;
 	}
