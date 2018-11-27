@@ -35,6 +35,9 @@ public class LevelManager : MonoBehaviour {
 	}
 
 	public void GameOver(){
+		//Generate Death Particle
+		Instantiate (DeathParticle, Player.transform.position, Player.transform.rotation);
+		
 		//Hide Player
 		CurrentPlayer.SetActive(false);
 		Player.GetComponent<Renderer> ().enabled = false;
