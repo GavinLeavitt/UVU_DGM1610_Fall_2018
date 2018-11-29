@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour {
 	
 	public static int Score;
+
+	public int WinScore;
+	public Text WinText;
+	public Text LoseText;
+
 	public static int MaxHealth;
 	public static int Health;
 	public static int Ammo;
@@ -13,6 +19,10 @@ public class ScoreManager : MonoBehaviour {
 
 	Text ScoreText;
 	public LevelManager LevelManager;
+
+	void Awake(){
+		Time.timeScale = 1;
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -22,8 +32,12 @@ public class ScoreManager : MonoBehaviour {
 		Score = 0;
 		MaxHealth = 10;
 		Health = MaxHealth;
-		Ammo = 50;
+		Ammo = 15;
 		Lives = 3;
+
+		ScoreText = GetComponent<Text>();
+		WinText.GetComponent<Text>().enabled = false;
+		LoseText.GetComponent<Text>().enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -36,6 +50,14 @@ public class ScoreManager : MonoBehaviour {
 			Health = MaxHealth;
 		}
 		
+		// If the player win display win text
+		if(Score >= WinScore){
+			print("Win Score Reached = " + Score);
+			WinText.GetComponent<Text>().enabled = true;
+			Time.timeScale = 0;
+		}
+
+		// Subtract lives when health reaches 0
 		if (Health <= 0){
 			Health = MaxHealth;
 			AddLives(-1);
@@ -43,9 +65,17 @@ public class ScoreManager : MonoBehaviour {
 				LevelManager.RespawnPlayer();
 			} else {
 				LevelManager.GameOver();
+				LoseText.GetComponent<Text>().enabled = true;
 				print("GAME OVER");
+				Time.timeScale = 0;
 			}
 		}
+
+		// If player hits the Escape key return to start menu
+		if(Input.GetKeyDown(KeyCode.Escape)){
+			SceneManager.LoadScene(0);
+		}
+
 		ScoreText.text = "Score: " + Score + "\nHealth: " + Health + "\nAmmo: " + Ammo + "\nLives: " + Lives;
 	}
 
