@@ -8,6 +8,7 @@ public class CharacterMove : MonoBehaviour {
 	public int MoveSpeed;
 	public float JumpHeight;
 	private bool DoubleJump;
+	private int MoveAxis;
 
 	// Player grounded variables
 	public Transform GroundCheck;
@@ -18,6 +19,7 @@ public class CharacterMove : MonoBehaviour {
 	//Non-Stick Player
 	private float MoveVelocity;
 
+	public Animator Animator;
 
 	// Use this for initialization
 	void Start () {
@@ -53,12 +55,13 @@ public class CharacterMove : MonoBehaviour {
 		if(Input.GetKey (KeyCode.D)){
 			//GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 			MoveVelocity = MoveSpeed;
-			
-		}
+			Animator.SetFloat("Speed", Mathf.Abs(MoveVelocity));
+		}  
+
 		if(Input.GetKey (KeyCode.A)){
 			//GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 			MoveVelocity = -MoveSpeed;
-			
+			Animator.SetFloat("Speed", Mathf.Abs(MoveVelocity));
 		}
 
 		GetComponent<Rigidbody2D>().velocity = new Vector2(MoveVelocity, GetComponent<Rigidbody2D>().velocity.y);
