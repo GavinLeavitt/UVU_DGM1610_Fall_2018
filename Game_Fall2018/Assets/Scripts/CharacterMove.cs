@@ -26,7 +26,9 @@ public class CharacterMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		Animator.SetBool("IsWalking", false);
+		Animator.SetBool("IsJumping", false);
+		Animator.SetBool("IsFalling", false);
 	}
 	
 	void FixedUpdate () {
@@ -55,39 +57,35 @@ public class CharacterMove : MonoBehaviour {
 		MoveVelocity = 0f;
 
 		// This code makes the character move from side to side using the A and D keys
-		// if(Input.GetKey (KeyCode.D)){
-		// 	//GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-		// 	MoveVelocity = MoveSpeed;
-		// 	Animator.SetFloat("Speed", Mathf.Abs(MoveVelocity));
-		// }  
-
-		// if(Input.GetKey (KeyCode.A)){
-		// 	//GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-		// 	MoveVelocity = -MoveSpeed;
-		// 	Animator.SetFloat("Speed", Mathf.Abs(MoveVelocity));
-		// }
-
-		// New code for keyboard input
-		if(Input.GetKey(KeyCode.D)) {
-			RightInput = 1;
-		} else {
-			RightInput = 0;
+		if(Input.GetKey (KeyCode.D)){
+			//GetComponent<Rigidbody2D>().velocity = new Vector2(MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+			MoveVelocity = MoveSpeed;
+			Animator.SetBool("IsWalking", true);
+		} else if (Input.GetKeyUp(KeyCode.D)){
+			Animator.SetBool("IsWalking", false);
 		}
 
-		if(Input.GetKey(KeyCode.A)) {
-			LeftInput = 1;
-		} else {
-			LeftInput = 0;
+		if(Input.GetKey (KeyCode.A)){
+			//GetComponent<Rigidbody2D>().velocity = new Vector2(-MoveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+			MoveVelocity = -MoveSpeed;
+			Animator.SetBool("IsWalking", true);
+		} else if (Input.GetKeyUp(KeyCode.A)){
+			Animator.SetBool("IsWalking", false);
 		}
 
-		MoveAxis = (RightInput - LeftInput);
-		MoveVelocity = MoveSpeed*MoveAxis;
-		Animator.SetFloat("Speed", Mathf.Abs(MoveVelocity));
+		if (!Grounded || GetComponent<Rigidbody2D>().velocity.y != 0) {
+			if (GetComponent<Rigidbody2D>().velocity.y < 0) {
+				Animator.SetBool("IsFalling", true);
+			} else {
+				Animator.SetBool("IsFalling", false);
+			}
+			Animator.SetBool("IsJumping", true);
+		} else {
+			Animator.SetBool("IsFalling", false);
+			Animator.SetBool("IsJumping", false);
+		}
 
 		GetComponent<Rigidbody2D>().velocity = new Vector2(MoveVelocity, GetComponent<Rigidbody2D>().velocity.y);
-
-		// Controlling jump animation
-		Animator.SetFloat("FallSpeed", -(GetComponent<Rigidbody2D>().velocity.y));
 
 		// Flip player sprite
 		if (GetComponent<Rigidbody2D>().velocity.x > 0)
