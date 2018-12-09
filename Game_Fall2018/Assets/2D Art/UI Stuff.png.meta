@@ -1,30 +1,25 @@
 fileFormatVersion: 2
-guid: c9608bbbac02ca145b0951c52ee105b0
+guid: b14d7126e4c95af4390d6904d08e8d54
 TextureImporter:
   fileIDToRecycleName:
-    21300000: SpriteWalk0
-    21300002: SpriteWalk1
-    21300004: SpriteWalk2
-    21300006: SpriteWalk3
-    21300008: SpriteWalk4
-    21300010: SpriteWalk5
-    21300012: SpriteWalk6
-    21300014: SpriteWalk7
-    21300016: SpriteJump
-    21300018: SpriteFall
-    21300020: SpriteSmokeParticle
-    21300022: SpriteRocksTile
-    21300024: SpriteHouse
-    21300026: SpriteGrassTile
-    21300028: SpriteFlowerTile
-    21300030: SpriteTree
-    21300032: SpriteSlope
-    21300034: SpriteCliff
-    21300036: SpriteSignpost
-    21300038: SpriteVikingShip
-    21300040: Background0
-    21300042: Background1
-    21300044: Background2
+    21300000: HealthBar5
+    21300002: HealthBar4
+    21300004: HealthBar3
+    21300006: HealthBar2
+    21300008: HealthBar1
+    21300010: AxeUI
+    21300012: LifeUI
+    21300014: FontX
+    21300016: Font0
+    21300018: Font1
+    21300020: Font2
+    21300022: Font3
+    21300024: Font4
+    21300026: Font5
+    21300028: Font6
+    21300030: Font7
+    21300032: Font8
+    21300034: Font9
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -64,8 +59,8 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
-  spriteMeshType: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -107,461 +102,361 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpriteWalk0
+      name: HealthBar5
       rect:
         serializedVersion: 2
-        x: 44
-        y: 1180
-        width: 170
-        height: 225
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95e288a54e4d4a54b8591e02fe57e2ec
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteWalk1
-      rect:
-        serializedVersion: 2
-        x: 284
-        y: 1163
-        width: 170
-        height: 225
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 55bf04a0a8e29e04d814bd71d4c43680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteWalk2
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 1161
-        width: 170
-        height: 238
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78586418169ca48488f455fac4daa3ec
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteWalk3
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 1155
-        width: 170
-        height: 243
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c1ece9e1cd967549a54d974177ddebc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteWalk4
-      rect:
-        serializedVersion: 2
-        x: 875
-        y: 1159
-        width: 170
-        height: 232
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a2b0df107663fdd4ea98871ac69211a4
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteWalk5
-      rect:
-        serializedVersion: 2
-        x: 1071
-        y: 1160
-        width: 170
-        height: 225
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdac0a5d81dc79b40b53bba644f5214e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteWalk6
-      rect:
-        serializedVersion: 2
-        x: 1259
-        y: 1158
-        width: 136
-        height: 242
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac5fb691c892ba949b469d83d0c8df7c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteWalk7
-      rect:
-        serializedVersion: 2
-        x: 1413
-        y: 1160
+        x: 2
+        y: 131
         width: 129
-        height: 239
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7bf7f53e03181c34dbd9dc06e9d05e54
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteJump
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 942
-        width: 154
-        height: 233
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96feb5dc0b6aa944fa23f84bcf4a5d8c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteFall
-      rect:
-        serializedVersion: 2
-        x: 268
-        y: 948
-        width: 122
-        height: 211
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 238fa3b9e758a4a44b2257f50d30276e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteSmokeParticle
-      rect:
-        serializedVersion: 2
-        x: 628
-        y: 965
-        width: 170
-        height: 146
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb0a698ff09bcd242824ad6275fdd2a5
+      spriteID: 6d3f600a06af376478678b5c258c6dd1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteRocksTile
+      name: HealthBar4
       rect:
         serializedVersion: 2
-        x: 75
-        y: 514
-        width: 230
-        height: 126
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab424333d43604c44922ebfc52a7e8d1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteHouse
-      rect:
-        serializedVersion: 2
-        x: 312
-        y: 519
-        width: 658
-        height: 421
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 1}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62c6be09c1fe8e544bb7b0bddcb834fc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteGrassTile
-      rect:
-        serializedVersion: 2
-        x: 974
-        y: 517
-        width: 150
-        height: 116
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68a5ce16d8a100b46a211c270b4820a8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteFlowerTile
-      rect:
-        serializedVersion: 2
-        x: 1126
-        y: 517
-        width: 162
-        height: 98
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b906875bf6650f343a33da71614cc5ee
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteTree
-      rect:
-        serializedVersion: 2
-        x: 1289
-        y: 521
-        width: 300
-        height: 593
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e41790fd75fac9e4da6bea68c156902f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteSlope
-      rect:
-        serializedVersion: 2
-        x: 1593
-        y: 520
-        width: 103
-        height: 167
+        x: 2
+        y: 104
+        width: 129
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f9b73daefd253942bfd502f72e78dc6
+      spriteID: 06258eb3dc4029949bd6217f0b65cbd8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteCliff
+      name: HealthBar3
       rect:
         serializedVersion: 2
-        x: 1706
-        y: 516
-        width: 182
-        height: 185
+        x: 2
+        y: 77
+        width: 129
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d7f8b124166bc0448bcb07717f510ad
+      spriteID: ba5652fd1418dfb47b5804550484ce11
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteSignpost
+      name: HealthBar2
       rect:
         serializedVersion: 2
-        x: 1767
-        y: 701
-        width: 80
-        height: 192
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b84648ba84be2544bad083e62fa47411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteVikingShip
-      rect:
-        serializedVersion: 2
-        x: 1890
-        y: 513
-        width: 622
-        height: 509
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4fce1399ed153894585a682a4dfefe2b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Background0
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 12
-        width: 696
-        height: 502
+        x: 2
+        y: 51
+        width: 129
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3367a15648ef3d9419cf05b54723386c
+      spriteID: b5f1075521c9b7f4e9a8204244c76f49
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background1
+      name: HealthBar1
       rect:
         serializedVersion: 2
-        x: 771
-        y: 16
-        width: 770
-        height: 296
+        x: 2
+        y: 26
+        width: 129
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54c890a0088c893468e207f0f8341fdf
+      spriteID: 7bc8869d445c9a646854bc2ad8ce3b0d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Background2
+      name: AxeUI
       rect:
         serializedVersion: 2
-        x: 1563
-        y: 28
-        width: 844
-        height: 473
+        x: 9
+        y: 3
+        width: 20
+        height: 20
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebff382b34cb9d54fa74f89dd3cb3084
+      spriteID: c9d4ff3395e7079408493aa754f8f96e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeUI
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 3
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8052ab194603d28488139fd603202464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FontX
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 8
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d7e89d4f81fac40aafab349dd093f1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Font0
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 7
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50fa306b93d27e749a47ac07818c3686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Font1
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 7
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9220d5af2a0fb4cbb18191d8399111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Font2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 7
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce46f69ce06cd64a9ea9b676a78c7fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Font3
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 7
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4fe27e852c06a48948a5ee9412791e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Font4
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 7
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbce959cc713268429dad77a12b987c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Font5
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 7
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 979bf25643eb74543b16f5fc42c31b2c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Font6
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 7
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c98e437ffda6c4cadbed6ee368ee9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Font7
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 7
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c803928c1c24d1a4882296416e12f355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Font8
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 7
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ad6793f675df749a39cc7c65baf921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Font9
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 7
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5379bf8aa8f2574abf8c3f5d44c52b5
       vertices: []
       indices: 
       edges: []
@@ -569,7 +464,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: fa35c7dbb65c7674b8ef15f2559620f1
+    spriteID: 6b8391f1ba5b64f418cfec0ebbec53e1
     vertices: []
     indices: 
     edges: []

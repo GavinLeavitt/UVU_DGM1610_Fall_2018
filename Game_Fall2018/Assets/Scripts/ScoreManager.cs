@@ -30,9 +30,9 @@ public class ScoreManager : MonoBehaviour {
 		ScoreText = GetComponent<Text>();
 
 		Score = 0;
-		MaxHealth = 10;
+		MaxHealth = 5;
 		Health = MaxHealth;
-		Ammo = 15;
+		Ammo = 5;
 		Lives = 3;
 
 		ScoreText = GetComponent<Text>();
