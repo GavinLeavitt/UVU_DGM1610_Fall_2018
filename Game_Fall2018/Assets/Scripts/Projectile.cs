@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour {
-
-	public float Speed;
+    //public float Speed;
+	public Vector2 Direction = Vector2.one;
+	public float Magnitude = 1f;
 	public GameObject PC;
 
 	public GameObject EnemyDeath;
@@ -18,6 +19,7 @@ public class Projectile : MonoBehaviour {
 
 	public int TimeOut;
 
+
 	// Use this for initialization
 	void Start () {
 		PC = GameObject.Find("PC");
@@ -28,15 +30,26 @@ public class Projectile : MonoBehaviour {
 		AmmoPickup = Resources.Load("Prefab/Ammo") as GameObject;
 		LifePickup = Resources.Load("Prefab/Life") as GameObject;
 
-		if(PC.transform.localScale.x < 0)
-			Speed = -Speed;
+		if(PC.transform.localScale.x < 0) {
+			Direction = new Vector2(-0.8f, 1.3f);
+		} else {
+			Direction = new Vector2(0.8f, 1.3f);
+		}
+
+			
+			// Speed = -Speed;
+			//Direction = new Vector2(-1.0f, 1.0f);
 
 		Destroy(gameObject, TimeOut);
+
+		//Add force for throw
+		Rigidbody2D Rigidbody = GetComponent<Rigidbody2D>();
+		Rigidbody.AddRelativeForce(Direction*Magnitude, ForceMode2D.Impulse);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2D>().velocity.y);
+		//GetComponent<Rigidbody2D>().velocity = new Vector2(Speed, GetComponent<Rigidbody2D>().velocity.y);
 	}
 
 	// Destroy the projectile and the enemy when it enters the trigger area of an enemy

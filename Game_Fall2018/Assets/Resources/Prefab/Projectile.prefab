@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212562412347691880}
   - component: {fileID: 58503423209291492}
   - component: {fileID: 50419028332379116}
-  - component: {fileID: 114031669990772588}
+  - component: {fileID: 114535979670778540}
   - component: {fileID: 95925250530584430}
   m_Layer: 11
   m_Name: Projectile
@@ -57,8 +57,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 0.19634955
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_AngularDrag: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -97,7 +97,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114031669990772588
+--- !u!114 &114535979670778540
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,10 +105,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1051548524186406}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eed9d3e4f00840e4db73b0b7eb014908, type: 3}
+  m_Script: {fileID: 11500000, guid: 129eecf1b9059e04e8780064f80812e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 8
+  Direction: {x: 1, y: 1}
+  Magnitude: 1
   PC: {fileID: 0}
   EnemyDeath: {fileID: 0}
   ProjectileParticle: {fileID: 0}
